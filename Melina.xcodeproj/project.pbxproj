@@ -13,9 +13,13 @@
 		85E855DE25BAA24500A18009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E855DC25BAA24500A18009 /* Main.storyboard */; };
 		85E855E025BAA24700A18009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E855DF25BAA24700A18009 /* Assets.xcassets */; };
 		85E855E325BAA24700A18009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E855E125BAA24700A18009 /* LaunchScreen.storyboard */; };
+		8D893970D98F1D9BFCFE0CB3 /* Pods_Melina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F92774201B3E9348C5E2AF0 /* Pods_Melina.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045028C1CCAAE7FA805F0FF1 /* Pods-Melina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Melina.debug.xcconfig"; path = "Target Support Files/Pods-Melina/Pods-Melina.debug.xcconfig"; sourceTree = "<group>"; };
+		76CA121EAE239AD421D553F9 /* Pods-Melina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Melina.release.xcconfig"; path = "Target Support Files/Pods-Melina/Pods-Melina.release.xcconfig"; sourceTree = "<group>"; };
+		7F92774201B3E9348C5E2AF0 /* Pods_Melina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E855D325BAA24500A18009 /* Melina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E855D625BAA24500A18009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85E855D825BAA24500A18009 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D893970D98F1D9BFCFE0CB3 /* Pods_Melina.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23096B8BE72DA40DF373978B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				045028C1CCAAE7FA805F0FF1 /* Pods-Melina.debug.xcconfig */,
+				76CA121EAE239AD421D553F9 /* Pods-Melina.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85E855CA25BAA24500A18009 = {
 			isa = PBXGroup;
 			children = (
 				85E855D525BAA24500A18009 /* Melina */,
 				85E855D425BAA24500A18009 /* Products */,
+				23096B8BE72DA40DF373978B /* Pods */,
+				D0C95AB6C6859E15EEC41951 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = Melina;
 			sourceTree = "<group>";
 		};
+		D0C95AB6C6859E15EEC41951 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F92774201B3E9348C5E2AF0 /* Pods_Melina.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85E855E725BAA24700A18009 /* Build configuration list for PBXNativeTarget "Melina" */;
 			buildPhases = (
+				D4E31E4A7DC7B5C280308A84 /* [CP] Check Pods Manifest.lock */,
 				85E855CF25BAA24500A18009 /* Sources */,
 				85E855D025BAA24500A18009 /* Frameworks */,
 				85E855D125BAA24500A18009 /* Resources */,
+				69ADD6020DC1E7D288D516DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69ADD6020DC1E7D288D516DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Melina/Pods-Melina-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Melina/Pods-Melina-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Melina/Pods-Melina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4E31E4A7DC7B5C280308A84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Melina-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85E855CF25BAA24500A18009 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		85E855E825BAA24700A18009 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045028C1CCAAE7FA805F0FF1 /* Pods-Melina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		85E855E925BAA24700A18009 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CA121EAE239AD421D553F9 /* Pods-Melina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
