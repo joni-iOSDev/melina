@@ -13,7 +13,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        checkEndpoint()
+    }
+    
+    func checkEndpoint() {
+        NetworkManager().search(item: "iPhone") { (responseBool) in
+            print("ya tenemos los resultados ")
+        } error: {
+            //
+        }
 
-
+    }
 }
 

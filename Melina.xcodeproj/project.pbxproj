@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		857DD69C25BE24B00091E4FE /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857DD69B25BE24B00091E4FE /* NetwrokManager.swift */; };
 		85E855D725BAA24500A18009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E855D625BAA24500A18009 /* AppDelegate.swift */; };
 		85E855D925BAA24500A18009 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E855D825BAA24500A18009 /* SceneDelegate.swift */; };
 		85E855DB25BAA24500A18009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E855DA25BAA24500A18009 /* ViewController.swift */; };
 		85E855DE25BAA24500A18009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E855DC25BAA24500A18009 /* Main.storyboard */; };
 		85E855E025BAA24700A18009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E855DF25BAA24700A18009 /* Assets.xcassets */; };
 		85E855E325BAA24700A18009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E855E125BAA24700A18009 /* LaunchScreen.storyboard */; };
+		85E855F225BB6FDA00A18009 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E855F125BB6FDA00A18009 /* EndPointType.swift */; };
+		85E855F625BB70A500A18009 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E855F525BB70A500A18009 /* Router.swift */; };
+		85F8AE9025BDE17700ED547C /* ItemsEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8AE8F25BDE17700ED547C /* ItemsEndPoints.swift */; };
+		85F8AE9325BDE32F00ED547C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8AE9225BDE32F00ED547C /* Environment.swift */; };
+		85F8AE9725BE227C00ED547C /* ShortcutsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8AE9625BE227C00ED547C /* ShortcutsExtensions.swift */; };
 		8D893970D98F1D9BFCFE0CB3 /* Pods_Melina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F92774201B3E9348C5E2AF0 /* Pods_Melina.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +26,7 @@
 		045028C1CCAAE7FA805F0FF1 /* Pods-Melina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Melina.debug.xcconfig"; path = "Target Support Files/Pods-Melina/Pods-Melina.debug.xcconfig"; sourceTree = "<group>"; };
 		76CA121EAE239AD421D553F9 /* Pods-Melina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Melina.release.xcconfig"; path = "Target Support Files/Pods-Melina/Pods-Melina.release.xcconfig"; sourceTree = "<group>"; };
 		7F92774201B3E9348C5E2AF0 /* Pods_Melina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		857DD69B25BE24B00091E4FE /* NetwrokManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
 		85E855D325BAA24500A18009 /* Melina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E855D625BAA24500A18009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85E855D825BAA24500A18009 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,11 @@
 		85E855DF25BAA24700A18009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E855E225BAA24700A18009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85E855E425BAA24700A18009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E855F125BB6FDA00A18009 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		85E855F525BB70A500A18009 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		85F8AE8F25BDE17700ED547C /* ItemsEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsEndPoints.swift; sourceTree = "<group>"; };
+		85F8AE9225BDE32F00ED547C /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		85F8AE9625BE227C00ED547C /* ShortcutsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +60,15 @@
 				045028C1CCAAE7FA805F0FF1 /* Pods-Melina.debug.xcconfig */,
 				76CA121EAE239AD421D553F9 /* Pods-Melina.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		857DD69A25BE24990091E4FE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				857DD69B25BE24B00091E4FE /* NetwrokManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		85E855CA25BAA24500A18009 = {
@@ -73,6 +92,8 @@
 		85E855D525BAA24500A18009 /* Melina */ = {
 			isa = PBXGroup;
 			children = (
+				85F8AE9525BE225100ED547C /* Utils */,
+				85E855EF25BAA43A00A18009 /* Services */,
 				85E855D625BAA24500A18009 /* AppDelegate.swift */,
 				85E855D825BAA24500A18009 /* SceneDelegate.swift */,
 				85E855DA25BAA24500A18009 /* ViewController.swift */,
@@ -82,6 +103,50 @@
 				85E855E425BAA24700A18009 /* Info.plist */,
 			);
 			path = Melina;
+			sourceTree = "<group>";
+		};
+		85E855EF25BAA43A00A18009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				857DD69A25BE24990091E4FE /* Manager */,
+				85F8AE8E25BDE10100ED547C /* Endpoints */,
+				85E855F025BAA44500A18009 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		85E855F025BAA44500A18009 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				85F8AE9225BDE32F00ED547C /* Environment.swift */,
+				85E855F125BB6FDA00A18009 /* EndPointType.swift */,
+				85F8AE9A25BE22AD00ED547C /* Routers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		85F8AE8E25BDE10100ED547C /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				85F8AE8F25BDE17700ED547C /* ItemsEndPoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		85F8AE9525BE225100ED547C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				85F8AE9625BE227C00ED547C /* ShortcutsExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		85F8AE9A25BE22AD00ED547C /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				85E855F525BB70A500A18009 /* Router.swift */,
+			);
+			path = Routers;
 			sourceTree = "<group>";
 		};
 		D0C95AB6C6859E15EEC41951 /* Frameworks */ = {
@@ -206,9 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E855F225BB6FDA00A18009 /* EndPointType.swift in Sources */,
+				857DD69C25BE24B00091E4FE /* NetwrokManager.swift in Sources */,
 				85E855DB25BAA24500A18009 /* ViewController.swift in Sources */,
+				85E855F625BB70A500A18009 /* Router.swift in Sources */,
+				85F8AE9725BE227C00ED547C /* ShortcutsExtensions.swift in Sources */,
+				85F8AE9325BDE32F00ED547C /* Environment.swift in Sources */,
 				85E855D725BAA24500A18009 /* AppDelegate.swift in Sources */,
 				85E855D925BAA24500A18009 /* SceneDelegate.swift in Sources */,
+				85F8AE9025BDE17700ED547C /* ItemsEndPoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
