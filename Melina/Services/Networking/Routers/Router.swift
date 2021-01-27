@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 public typealias ErrorResponse = ()->Void
-public typealias Response = ()->Void
+public typealias Response = ([[String:Any]])->Void
 
 
 protocol NetworkRouter {
@@ -18,32 +18,32 @@ protocol NetworkRouter {
     
     func request(_ route: EndPoint,
                  onResponse: @escaping Response,
-                 errorResponse: @escaping ErrorResponse)
+                 onErrorResponse: @escaping ErrorResponse)
     
     func cancel()
+    
+    func getPictureFrom(url: String, imgDataResponse: @escaping ((Data)->Void), onError: ErrorResponse)
 }
 
 class Router<EndPoint: EndPointType>: NetworkRouter {
     
     func request(_ route: EndPoint,
                  onResponse: @escaping Response,
-                 errorResponse: @escaping ErrorResponse) {
+                 onErrorResponse: @escaping ErrorResponse) {
         
         let urlRequest = route.baseURL.appendingPathComponent(route.path)
         print("REQUEST ==>>> \(urlRequest)")
         
-        
-        
-        let alamofireRequest = AF.request(urlRequest,
-                                          method: route.httpMerthod,
+        let alamofireRequest = AF.request(urlRequest, method: route.httpMerthod,
                                           parameters: route.params,
-                                          headers: route.headers,
-                                          interceptor: nil,
-                                          requestModifier: nil)
+                                          headers: route.headers)
+        
         alamofireRequest.responseJSON { (response) in
-            if let res = response.value as? [String : Any] {
-                print("RESPONSE ===>>> \(res)")
-                onResponse()
+            
+            if let jsonResponse = response.value as? [String:Any],
+               let jsonResult = jsonResponse["results"] as? [[String:Any]]{
+                print("RESPONSE => \(jsonResponse)")
+                onResponse(jsonResult)
             }
         }
     }
@@ -52,6 +52,16 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         
     }
     
-    
+    func getPictureFrom(url: String, imgDataResponse: @escaping ((Data) -> Void), onError: () -> Void) {
+        print("REQUEST ==>>> \(url)")
+        let alamofireRequest = AF.request(url, method: .get)
+        
+        alamofireRequest.response { (response) in
+            
+            if let dataR = response.data {
+                imgDataResponse(dataR)
+            }
+        }
+    }
     
 }
