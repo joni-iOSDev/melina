@@ -9,6 +9,7 @@ import UIKit
 
 class LogInVC: UIViewController {
     
+    // TODO: Podemos generar vistas custom con un patron builder para mejorar la reultilizacion de estos componentes. 
     let userNameLabel: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false

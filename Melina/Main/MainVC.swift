@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+/**
+ Primera `Vista` que se instancia.
+ */
 class MainVC: UIViewController {
 
     var presenter: MainPresenter?

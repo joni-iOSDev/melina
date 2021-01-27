@@ -89,7 +89,6 @@ extension DashboardVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DashboardConstants.cellId, for: indexPath) as! ItemCell
-        cell.accessoryType = .disclosureIndicator
         cell.prepareForReuse()
         presenter?.configure(cell, in: indexPath.row)
         return cell

@@ -26,6 +26,7 @@ class ItemCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        accessoryType = .disclosureIndicator
         titleLabel.text = nil
         imgItem.image = nil
     }
