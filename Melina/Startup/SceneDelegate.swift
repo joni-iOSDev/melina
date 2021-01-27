@@ -8,9 +8,9 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    //Iniciamos con el flujo principal, o en todo caso podemos tener multiples coordinator y desde una push notification (Push Manager) anviarlo al flujo que se desea
     var coordinator: MainCoordinator?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }

@@ -31,6 +31,8 @@ class MainCoordinator: CoordinatorProtocol {
     }
     // MARK: - INICIO DE FLUJO
     func start() {
+        // Podemos validar y enviar a cualquier otra vista
+        //Ejemplo: isLogged ? goToMain() : goToWelcome()
         goToMain()
     }
     
@@ -72,7 +74,7 @@ class MainCoordinator: CoordinatorProtocol {
 }
 
 // MARK: - Centro de navigación
-// Instanciamoos Presenter con un coordinator, dejando la responsabilidad al mismo y no al VC, obtenemos de esta manera el VC solo interactue con el usuario y no se encargue de otra cuestion mas que recibir eventos.
+// Instanciamos Presenter con un coordinator, dejando la responsabilidad de navigacion al mismo y no al VC, obtenemos de esta manera que el VC solo interactue con el usuario y no se encargue de otra cuestion mas que recibir eventos.
 extension MainCoordinator {
     // MARK: - GO TO
     // MARK: - Main

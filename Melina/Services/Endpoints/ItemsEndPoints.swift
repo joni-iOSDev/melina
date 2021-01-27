@@ -8,17 +8,23 @@
 import Foundation
 import Alamofire
 
+//Podemos manejar distintos EndPointTyp,
+// por ejemplo: [ItemsEndPoint, UserEndPoint, SellerEndPoint, etc]
+
+/// Lista de endpoint
 public enum ItemsEndPoint {
     case search(_ item: String)
 }
 
+/// Extendemos para darle view a nuestro enum implementando sus properties correspondiente para el armado del request.
 extension ItemsEndPoint: EndPointType {
     
-    
+    // punto de control donde podemos cambiar de ambientes rapidamente.
     var environment: NetworkEnvironment {
         return .prod
     }
     
+    // properties para un mejor control del request
     var baseURL: URL {
         guard let url = URL(string: "\(environment.getURL())") else {
             fatalError("Error environment")

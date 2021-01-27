@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+// Podemos generar multiples routers y controlarlos facilmente desde manager.
 public typealias ErrorResponse = ()->Void
 public typealias Response = ([[String:Any]])->Void
 
@@ -27,16 +28,13 @@ protocol NetworkRouter {
 
 class Router<EndPoint: EndPointType>: NetworkRouter {
     
-    func request(_ route: EndPoint,
-                 onResponse: @escaping Response,
-                 onErrorResponse: @escaping ErrorResponse) {
+    func request(_ route: EndPoint, onResponse: @escaping Response, onErrorResponse: @escaping ErrorResponse) {
         
         let urlRequest = route.baseURL.appendingPathComponent(route.path)
         print("REQUEST ==>>> \(urlRequest)")
         
-        let alamofireRequest = AF.request(urlRequest, method: route.httpMerthod,
-                                          parameters: route.params,
-                                          headers: route.headers)
+        //Init request
+        let alamofireRequest = AF.request(urlRequest, method: route.httpMerthod, parameters: route.params, headers: route.headers)
         
         alamofireRequest.responseJSON { (response) in
             

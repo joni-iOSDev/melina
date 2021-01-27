@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - MVP
+// Protocols
 protocol MainView {
     
 }

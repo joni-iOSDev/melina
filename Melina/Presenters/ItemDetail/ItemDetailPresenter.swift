@@ -31,13 +31,13 @@ final class ItemDetailPresenter {
         view?.setupImgItem()
     }
     
-    func configureUIItem(_ completionHandler: @escaping ((MLItem) -> Void)) {
+    func configureUIItem(_ completionHandler: @escaping ((MLItem) -> Void)) { // TODO: Pasar a un typealias el closure
         if let itemOk = itemId {
             completionHandler(itemOk)
         }
     }
     
-    func confifurePicture(_ completionHandler: @escaping ((Data) -> Void)) {
+    func confifurePicture(_ completionHandler: @escaping ((Data) -> Void)) { // TODO: Pasar a un typealias el closure
         if let itemOk = itemId {
             NetworkManager().fetchImgFrom(url: itemOk.thumbnailURL) { (imgData) in
                 completionHandler(imgData)

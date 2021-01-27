@@ -6,11 +6,14 @@
 //
 
 import Foundation
+//
+/// Un typa alias para  exnteder y ofrecer un codigo mejor reutilizable.
+typealias Currency = Int
 
-typealias Pesos = Int
 
-extension Pesos {
-    func format(_ currency: Currency) -> String {
+extension Currency {
+    // Agregamos un currency format.
+    func format(_ currency: TypeCurrency) -> String {
         let numberFormarter = NumberFormatter()
         numberFormarter.numberStyle = .currency
         numberFormarter.locale = Locale(identifier:  "\(currency == .pesos ? "es_ARG" : "en_US")")
@@ -23,7 +26,7 @@ extension Pesos {
         return ""
     }
     
-    enum Currency {
+    enum TypeCurrency {
         case pesos
         case dolar
     }

@@ -11,7 +11,7 @@ class MLItem {
     
     let title: String?
     let id: String?
-    let price: Pesos
+    let price: Currency
     let thumbnailURL: String
     
     init(json: [String:Any]) {

@@ -11,7 +11,7 @@ protocol DashboardView {
     func setupUI()
     func refreshData()
 }
-
+// Protocol para configurar las celdas.
 protocol DashboardCellView {
     func setup(price: String, title: String?)
     func setupImg(data: Data)
@@ -19,8 +19,11 @@ protocol DashboardCellView {
 
 class DashboardPresenterr {
     
+    // Marcmos como filePrivate para que solo sea usable solo desde este file.
     fileprivate var view: DashboardView?
     fileprivate var coordinator: MainCoordinator?
+    
+    // Con este observer evitamos hacer reloadData desde otros metodos.
     private var items: [MLItem] = [] {
         didSet {
             view?.refreshData()
@@ -47,7 +50,7 @@ class DashboardPresenterr {
             cell.setupImg(data: imageData)
         } error: {
             ()
-            //TODO: Manager error
+            //TODO: Error Manager
         }
     }
     
@@ -56,11 +59,13 @@ class DashboardPresenterr {
         coordinator?.goToDetailItem(with: item)
     }
     
+    // Evitamos memory leak con [weak self]
     func searchItem(search: String) {
         NetworkManager().search(item: search) { [weak self] (itemsSearched) in
             self?.items = itemsSearched
         } error: {
             ()
+            //TODO: Error Manager
         }
     }
 }
