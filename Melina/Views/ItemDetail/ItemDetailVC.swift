@@ -61,7 +61,6 @@ class ItemDetailVC: UIViewController {
 }
 
 extension ItemDetailVC: ItemDetailView {
-    
     func setupItem() {
         presenter?.configureUIItem({ [weak self] (item) in
             self?.titleItemLabel.text =  item.title

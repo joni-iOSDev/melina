@@ -14,7 +14,14 @@ import UIKit
 class MainVC: UIViewController {
 
     var presenter: MainPresenter?
-    var imageLogo = MLImageView(frame: .zero)
+    var imageLogo = MLImageView
+        .Builder()
+        .add(.logo)
+        .size()
+        .setContentMode(.scaleToFill)
+        .build()
+    
+    var time: Timer?
     
     override func viewDidLoad() {
         presenter?.viewDidLoad()
@@ -23,12 +30,14 @@ class MainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter?.viewDidAppear()
+        // Se agrega timer para simular un loader data
+        time = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { [weak self] (aTimer) in
+            self?.presenter?.viewDidAppear()
+        })
     }
     
     func setupUI() {
         view.backgroundColor = .white
-        imageLogo.setupLogo()
         view.addSubview(imageLogo)
         imageLogo.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         imageLogo.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
