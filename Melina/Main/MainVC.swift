@@ -16,9 +16,8 @@ class MainVC: UIViewController {
     var presenter: MainPresenter?
     var imageLogo = MLImageView
         .Builder()
-        .add(.logo)
-        .size()
-        .setContentMode(.scaleToFill)
+        .add(.setImage(nameImg: "mlLogo"))
+        .setContentMode(.scaleAspectFit)
         .build()
     
     var time: Timer?
@@ -41,6 +40,9 @@ class MainVC: UIViewController {
         view.addSubview(imageLogo)
         imageLogo.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         imageLogo.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        imageLogo.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        imageLogo.widthAnchor.constraint(equalToConstant: 80).isActive = true
+
     }
 }
 
