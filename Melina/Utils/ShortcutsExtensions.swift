@@ -18,8 +18,8 @@ extension Optional {
 extension UIImageView {
     // visualimos la carga de los items con una pequeña animacion, y obtener una experiancia de carga de data mas amigable, tambien se puede inlcuir un skeleton loader para una proxima implementacion
     func transition(toImage image: UIImage) {
-        UIView.transition(with: self, duration: 0.1, options: [.transitionCrossDissolve], animations: {
-            self.image = image
+        UIView.transition(with: self, duration: 0.1, options: [.transitionCrossDissolve], animations: { [ weak self ] in
+            self?.image = image
         }, completion: nil)
     }
 }
